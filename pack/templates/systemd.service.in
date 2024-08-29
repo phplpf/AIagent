@@ -1,0 +1,13 @@
+[Unit]
+Description=AIagent
+After=network.target
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=30
+WorkingDirectory=/opt/@PROJECT_NAME@/bin
+ExecStart=@SYSTEMCTL_EXECSTART@
+
+[Install]
+WantedBy=multi-user.target

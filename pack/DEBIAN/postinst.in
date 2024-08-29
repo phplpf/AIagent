@@ -1,0 +1,5 @@
+# /bin/bash
+
+systemctl enable @PROJECT_NAME@.service
+systemctl daemon-reload
+service @PROJECT_NAME@ start

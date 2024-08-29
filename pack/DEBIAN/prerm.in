@@ -1,0 +1,6 @@
+# /bin/bash
+
+if systemctl --all --type service | grep -q "@PROJECT_NAME@";then
+    systemctl disable @PROJECT_NAME@.service
+    service @PROJECT_NAME@ stop
+fi
